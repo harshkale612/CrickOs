@@ -188,7 +188,7 @@ export default function TeamDetailPage() {
                         <table className="w-full text-sm">
                           <thead>
                             <tr className="border-b border-border">
-                              {['#', 'Player', 'Position', 'Status', 'Baskets', 'Points', ''].map((h) => (
+                              {['#', 'Player', 'Position', 'Status', 'Runs', 'Wickets', ''].map((h) => (
                                 <th
                                   key={h}
                                   className="px-4 py-3 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wider first:pl-5 last:pr-5"
@@ -244,7 +244,7 @@ export default function TeamDetailPage() {
                                   {player.seasonStats.runs}
                                 </td>
                                 <td className="px-4 py-3 font-semibold text-amber-400">
-                                  {player.seasonStats.points}
+                                  {player.seasonStats.wickets}
                                 </td>
                                 <td className="pr-5 pl-2 py-3">
                                   <div className="flex items-center justify-end opacity-0 group-hover/row:opacity-100 transition-opacity gap-1">
@@ -365,19 +365,19 @@ export default function TeamDetailPage() {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">Technical Fouls</span>
-                        <span className="font-bold text-amber-400">{team.stats.technicalFouls}</span>
+                        <span className="text-sm text-muted-foreground">Wides</span>
+                        <span className="font-bold text-amber-400">{team.stats.wides}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">Ejections</span>
-                        <span className="font-bold text-red-500">{team.stats.ejections}</span>
+                        <span className="text-sm text-muted-foreground">No Balls</span>
+                        <span className="font-bold text-red-500">{team.stats.noBalls}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">Baskets Scored</span>
+                        <span className="text-sm text-muted-foreground">Wickets Taken</span>
                         <span className="font-bold text-foreground">{team.stats.wickets}</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-sm text-muted-foreground">Baskets Conceded</span>
+                        <span className="text-sm text-muted-foreground">Wickets Against</span>
                         <span className="font-bold text-muted-foreground">{team.stats.wicketsAgainst}</span>
                       </div>
                     </CardContent>

@@ -16,40 +16,43 @@ import type { MatchEvent } from '@/types';
 
 function eventEmoji(type: MatchEvent['type']): string {
   switch (type) {
-    case 'basket':    return '🏀';
-    case 'three_pointer': return '🎯';
-    case 'free_throw':    return '🏅';
-    case 'slam_dunk':     return '💥';
-    case 'technical_foul': return '🟡';
-    case 'ejection':      return '🔴';
-    case 'substitution':  return '🔄';
-    default:              return '•';
+    case 'six':          return '6️⃣';
+    case 'four':         return '4️⃣';
+    case 'wicket':       return '🏏';
+    case 'wide':         return '↔️';
+    case 'no_ball':      return '🚫';
+    case 'run_out':      return '🏃';
+    case 'review':       return '📺';
+    case 'substitution': return '🔄';
+    default:             return '•';
   }
 }
 
 function eventLabel(type: MatchEvent['type']): string {
   switch (type) {
-    case 'basket':    return 'Basket';
-    case 'three_pointer': return 'Three Pointer';
-    case 'free_throw':    return 'Free Throw';
-    case 'slam_dunk':     return 'Slam Dunk';
-    case 'technical_foul': return 'Technical Foul';
-    case 'ejection':      return 'Ejection';
-    case 'substitution':  return 'Substitution';
-    default:              return type;
+    case 'six':          return 'Six';
+    case 'four':         return 'Four';
+    case 'wicket':       return 'Wicket';
+    case 'wide':         return 'Wide';
+    case 'no_ball':      return 'No Ball';
+    case 'run_out':      return 'Run Out';
+    case 'review':       return 'Review';
+    case 'substitution': return 'Substitution';
+    default:             return type;
   }
 }
 
 function eventColor(type: MatchEvent['type']): string {
   switch (type) {
-    case 'basket':    return 'border-green-500/30 bg-green-500/5';
-    case 'three_pointer': return 'border-blue-500/30 bg-blue-500/5';
-    case 'free_throw':    return 'border-amber-500/30 bg-amber-500/5';
-    case 'slam_dunk':     return 'border-purple-500/30 bg-purple-500/5';
-    case 'technical_foul': return 'border-yellow-500/30 bg-yellow-500/5';
-    case 'ejection':      return 'border-red-500/30 bg-red-500/5';
-    case 'substitution':  return 'border-slate-500/30 bg-slate-500/5';
-    default:              return 'border-border';
+    case 'six':          return 'border-green-500/30 bg-green-500/5';
+    case 'four':         return 'border-blue-500/30 bg-blue-500/5';
+    case 'wicket':       return 'border-red-500/30 bg-red-500/5';
+    case 'wide':         return 'border-amber-500/30 bg-amber-500/5';
+    case 'no_ball':      return 'border-orange-500/30 bg-orange-500/5';
+    case 'run_out':      return 'border-purple-500/30 bg-purple-500/5';
+    case 'review':       return 'border-yellow-500/30 bg-yellow-500/5';
+    case 'substitution': return 'border-slate-500/30 bg-slate-500/5';
+    default:             return 'border-border';
   }
 }
 
